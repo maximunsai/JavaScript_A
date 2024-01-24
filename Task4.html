@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+    <link rel="stylesheet" href="Task4.css">
+</head>
+
+<body>
+    <h2>Using Sets</h2>
+    <h3>Used Dropdown and Onchange Event:</h3>
+    <P>Here this is my set: "Golconda", "Charminar", "Cyber_Tower", "TankBund" </P>
+    <p id="test"></p>
+    <select name="select" onchange="change()">
+        <option value="Size">Size</option>
+        <option value="add">Add</option>
+        <option value="delete">Delete</option>
+        <option value="has">Has</option>
+        <option value="foreach">foreach</option>
+    </select>
+    <script>
+        let places = new Set(["Golconda", "Charminar", "Cyber_Tower", "TankBund"]);
+        function change() {
+            let output = event.target.value;
+            let output1 ="";
+            switch (output) {
+                case "Size":
+                    output1 = places.size;
+                    break
+                case "add":
+                    let x =  places.add("MindSpace");
+                    places.forEach(function (value) {
+                        x += value + "<br>";
+                    })
+                    output1 = document.getElementById("test").innerHTML= x;
+                    break
+                case "delete":
+                    places.delete("Charminar");
+                    output1 = places();
+                    break
+                case "has":
+                    output1 = places.has("Golconda");
+                    break
+                case "foreach":
+                    let text = "";
+                    places.forEach(function (value) {
+                        text += value + "<br>";
+                    })
+                    output1 = document.getElementById("test").innerHTML= text;
+                    break
+
+            }
+            document.getElementById("test").innerHTML= output1;
+        }
+    </script>
+</body>
+
+</html>

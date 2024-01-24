@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Dynamic Form</title>
+    <link rel="stylesheet" href="Task11.css">
+</head>
+
+<body style="background-color: rgb(199, 180, 184);">
+    <h3>Using Classes</h3>
+    <h4 style="padding: 20px; font-size: 30px; ">Application Form:</h4>
+    <div>
+        <label for="name" class="lab">Name:</label>
+        <input type="text" id="test1" placeholder="Enter name" class="inp">
+        <br>
+        <br>
+
+        <label for="place" class="lab">Place:</label>
+        <input type="text" id="test2" placeholder="Enter place" class="inp">
+        <br><br>
+
+        <label for="dob" class="lab">Year of Birth:</label>
+        <input type="number" id="test3" placeholder="Enter year of birth" class="inp">
+        <br><br>
+        <!-- <label for="car" class="lab">Car Name:</label>
+        <input type="text" id="test4" placeholder="Enter your ccar name" class="inp">
+        <br><br> -->
+
+        <button onclick="submitForm()" class="but">Submit</button>
+    </div>
+
+    <p id="result" style="color: darkslateblue; font-size: 20px;"></p>
+    <p id="result1"></p>
+
+    <script>
+        class AppForm {
+            constructor(name, place, dob) {
+                this.name = name;
+                this.place = place;
+                this.dob = dob;
+            }
+
+            age() {
+                const date = new Date();
+                return date.getFullYear() - this.dob;
+            }
+
+            eligibility() {
+                if (this.age() > 20) {
+                    return "You are eligible for driving";
+                } else {
+                    return "You are not eligible for driving";
+                }
+            }
+        }
+        // class Car extends AppForm {
+        //     constructor(name, place, dob, brand) {
+        //         super(brand);
+        //         this.brand = brand;
+        //     }
+        //     show() {
+        //         return this.brand;
+        //     }
+
+        // }
+
+        function submitForm() {
+            const name = document.getElementById("test1").value;
+            const place = document.getElementById("test2").value;
+            const dob = document.getElementById("test3").value;
+            // const car = document.getElementById("test4").value;
+
+            const person = new AppForm(name, place, dob, );
+
+            document.getElementById("result").innerHTML = "Name is " + person.name +
+                " belongs to " + person.place + " and age is  " + person.age() + " , " + person.eligibility();
+            // document.getElementById("result1").innerHTML = person.show();
+        }
+    </script>
+</body>
+
+</html>

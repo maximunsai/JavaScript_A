@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(31, 180, 133);
+}
+div{
+    background-color: rgb(151, 156, 156);
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgb(41, 39, 39);
+}
+h3{
+    color: rgb(16, 119, 133);
+}
+button{
+    border: none;
+    border-radius: 4px;
+    background-color: antiquewhite;
+}

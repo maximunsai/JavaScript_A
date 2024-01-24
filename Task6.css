@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(170, 168, 163);
+}
+select{
+    border-radius: 3px;
+    background-color: rgb(224, 224, 132);
+    border: none;
+    width: 80px;
+    height: 25px;
+}

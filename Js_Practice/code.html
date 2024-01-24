@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Practice</title>
+</head>
+<body>
+    <h3>Changing the elements of constant array</h3>
+    <div>
+        <p id="task"></p>
+        <script>
+            const tech = ["cloud", "devops", "front-end", "back-end"];
+            tech[1] = "devsecops";
+            tech.push("full-stack");
+            document.getElementById("task").innerHTML = tech;
+        </script>
+    </div>
+    <div>
+        <p id="info">This info from external</p>
+        <button onclick="external()">Click here</button>
+        <script src="script.js">
+            //  document.getElementById("info").innerHTML= info.place;
+        </script>
+    </div>
+    <div>
+        <p id="info1"></p>
+        <script>
+            const details = { name: "sai", place: "hyd", height: "5.8" };
+            details.height = "5.7";
+            details.weight = "62kgs";
+            document.getElementById('info1').innerHTML = details.height;
+        </script>
+    </div>
+    <div>
+        <h1>Using Function</h1>
+        <p id="test"></p>
+        <script>
+            function myfunction() {
+                let bike_name = 'Panigale V4s';
+                let bike_brand = 'Ducati';
+                let price = '$4500';
+                let text = "My bike name is -" + bike_name + " " + " and it belong to " + " " + bike_brand + ", " + " price of the bike is " + price
+                document.getElementById("test").innerHTML = text;
+            }
+            myfunction();
+        </script>
+    </div>
+    <div>
+        <button onclick="Exponenet()"> Exponential</button>
+        <script>
+            function Exponenet()
+             {
+                let a= 8;
+                let b=6 ;
+                document.getElementById('test1').innerHTML = a**b;
+            }
+        </script>
+        <p id="test1"></p>
+    </div>
+    <div>
+        <button onclick="this.innerHTML = Date()">time and zone</button>
+    </div>
+    <div>
+        <button onmouseover="Exponenet()"> Exponential</button>
+        <script>
+            function Exponenet()
+             {
+                let a= 8;
+                let b=6 ;
+                document.getElementById('test1').innerHTML = a**b;
+            }
+        </script>
+        <p id="test1"></p>
+    </div>
+</body>
+</html>

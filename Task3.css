@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 400px 400px 400px 400px  ;
+    grid-template-rows: 200px 200px ;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color:rgb(206, 204, 204);
+    padding: 10px;
+    position: relative;
+    top: 100px;
+    border-radius: 3px;
+  }
+  div{
+    background-color: rgb(238, 234, 229);
+    border-radius: 3px;
+  }
+  h3{
+    color: rgb(163, 81, 95);
+
+  }
+  .over1{
+    cursor: pointer;
+   
+  }
+  /* .ter{
+    position: relative;
+    left: 280px;
+  bottom: 40px;
+  } */

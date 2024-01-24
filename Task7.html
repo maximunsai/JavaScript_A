@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_1</title>
+    <link rel="stylesheet" href="Task7.css">
+</head>
+
+<body style="background-color: rgb(135, 190, 135);">
+    <h2 style="color: rgb(209, 78, 78);">Using String Methods</h2>
+    <div>
+        <h3>Convert miles to kilometers:</h3>
+        <input type="number" id="enter">
+        <button onclick="convertt(event)">submit</button>
+        <p id="test"></p>
+        <script>
+            function convertt(event) {
+                
+                let x1= 1.60934 * (document.getElementById("enter").value) ;
+                document.getElementById("test").innerHTML = x1 + "km";
+            }
+           
+        </script>
+    </div>
+    <!-- <div>
+        <h3>Book and author:</h3>
+        <p id="test1"></p>
+        <script>
+            function book(name, author) {
+                return "Book name is" + " " + name + " " + " written by" + " " + author;
+            }
+            let value1 = book('Rich Dad Poor Dad', 'Robert Kiyosaki');
+            document.getElementById('test1').innerHTML = value1;
+        </script>
+    </div> -->
+    <div>
+        <h3>Event in html element onmouseover </h3>
+        <button onmouseover="Exponenet()"> Exponential</button>
+        <script>
+            function Exponenet() {
+                let a = 8;
+                let b = 6;
+                document.getElementById('test2').innerHTML = a ** b;
+            }
+        </script>
+        <p id="test2"></p>
+    </div>
+    <div>
+        <h3>String length</h3>
+        <input type="text" id="len">
+        <button onclick="but(event)"> submit</button>
+        <p id="test3"></p>
+        <script>
+            function but(event){
+                let x2 = (document.getElementById("len").value).length;
+                document.getElementById('test3').innerHTML = x2;
+            }
+            
+        </script>
+    <div>
+        <h3>String slice</h3>
+        <p>This is String : "Bike, Car, Train, Bus"</p>
+        <p>Enter the values below as per your wish:</p>
+        <input type="number" id="first">
+        <input type="number" id="second">
+        <button onclick="slicee(event)">submit</button>
+        <p id="test5"></p>
+        <script>
+
+            let transport = "Bike, Car, Train, Bus";   
+            function slicee(event){
+                let chop = transport.slice(document.getElementById("first").value,document.getElementById("second").value )
+                document.getElementById('test5').innerHTML = chop;
+            }
+        </script>
+     
+    <div>
+        <h3>Substring</h3>
+        <p>This is String : "Bike, Car, Train, Bus"</p>
+        <p>Enter the values below as per your wish:</p>
+        <input type="number" id="first1">
+        <input type="number" id="second2">
+        <button onclick="stringg(event)">submit</button>
+
+        <p id="test7"></p>
+
+        <script>
+            let transport2 = "Bike, Car, Train, Bus";
+            function stringg(event){
+                let chop1 = transport2.substring(document.getElementById("first1").value,document.getElementById("second2").value );
+                document.getElementById('test7').innerHTML = chop1;
+            }
+        </script>
+
+    </div>
+    <div>
+        <h3>String Replace </h3>
+        <p>My statement is : "My dream bike is Ducativ4s, I love to ride Ducativ4s."</p>
+        <input type=" text" id="rep">
+        <button onclick="replace()">click</button>
+        <p id="test8"></p>
+        <script>
+            function replace() {
+                let x ="My dream bike is Ducativ4s,  I love to ride Ducativ4s. ";
+                document.getElementById('test8').innerHTML = x.replace('Ducativ4s', document.getElementById("rep").value);
+
+            }
+        </script>
+    </div>
+    <div>
+        <h3>String Replacementall</h3>
+        <p>My statement is : "My dream bike is Ducativ4s, I love to ride Ducativ4s."</p>
+        <input type=" text" id="repl">
+        <button onclick="replacel()">click</button>
+        <p id="test9"></p>
+        <script>
+            function replacel(){
+                let y = "My dream bike is Ducativ4s, I love to ride Ducativ4s."
+                document.getElementById('test9').innerHTML = y.replaceAll('Ducativ4s',  document.getElementById("repl").value);
+            }
+        </script>
+    </div>
+    <div>
+        <h3> String Uppercase</h3>
+        <button onclick="upper()"> Click</button>
+        <p id="test10">hello artha</p>
+        <script>
+            function upper() {
+                let z = document.getElementById('test10').innerHTML;
+                document.getElementById('test10').innerHTML = z.toUpperCase();
+            }
+        </script>
+    </div>
+    <div>
+        <h3> String Uppercase</h3>
+        <button onclick="lower()"> Click</button>
+        <p id="test11">HELLO ARTHA</p>
+        <script>
+            function lower() {
+                let z = document.getElementById('test11').innerHTML;
+                document.getElementById('test11').innerHTML = z.toLowerCase();
+            }
+        </script>
+    </div>
+
+    <div>
+        <h3>String Concat</h3>
+        <p id="test12"></p>
+        <script>
+            let a = "Beyond";
+            let b = "this";
+            let c = "Limit";
+            let d = a.concat(" " + b + " " + c);
+            document.getElementById('test12').innerHTML = d;
+        </script>
+    </div>
+    <div>
+        <h3>String trim</h3>
+        <button onclick="trimm()">click</button>
+        <p id="test13"></p>
+        <script>
+            let cloud = "         Azure & Aws   ";
+           
+            function trimm(){
+                let loud = cloud.trim();
+                document.getElementById('test13').innerHTML = "length of cloud" + " " + cloud.length + " <br> length after trim" + loud.length;
+                   
+            }
+        </script>
+    </div>
+    <div>
+        <h3>String PadStart</h3>
+        <input type="number" id="star1">
+        <input type="text" id="star2">
+        <button onclick="pad()">submit</button>
+        <p id="test14"></p>
+
+        <script>
+           
+            function pad(){
+                let pad = "5";
+                pad1 = pad.padStart(document.getElementById("star1").value, document.getElementById("star2").value);
+                document.getElementById("test14").innerHTML = pad1;
+
+            }
+        </script>
+    </div>
+    <div>
+        <h3>String PadEnd</h3>
+        <input type="number" id="end1">
+        <input type="text" id="end2">
+        <button onclick="padd()">submit</button>
+        <p id="test15"></p>
+
+        <script>
+            function padd(){
+                let padd = "5";
+                pad2 = padd.padEnd(document.getElementById("end1").value, document.getElementById("end2").value);
+                document.getElementById("test15").innerHTML = pad2;
+
+            }
+        </script>
+    </div>
+    <div>
+        <h3>With If else</h3>
+        <p id="test19"></p>
+        <script>
+            let validate;
+            let x= 40;
+            if(x>25){
+                validate =" heigher value";
+            } 
+            else{
+                validate= "lower value";
+            }
+            document.getElementById('test19').innerHTML= validate;
+        </script>
+    </div>
+</body>
+</html>

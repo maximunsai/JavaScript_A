@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break&Continue</title>
+    <link rel="stylesheet" href="Task8.css">
+</head>
+<body>
+    <div>
+        <h3>Using Brake for Array</h3>
+        <button onclick="breake(event)">Break</button>
+        <p id="test2"> This is my array : " "Earth", "Jupiter","Venus","Saturn", "Mars", "Uranus", "Neptune", "Mercury" "</p>
+       
+        <script>
+            let planets = ["Earth", "Jupiter","Venus","Saturn", "Mars", "Uranus", "Neptune", "Mercury"];
+            let output = "";
+            function breake(event){
+                for(i=0; i<planets.length; i++){
+                len = planets[i]
+                if (i === 3){break;}
+                output += len + "<br>";
+            }
+            document.getElementById("test2").innerHTML=output;
+            }
+          
+        </script>
+    </div>
+    <div>
+        <h3>Using Continue for Array</h3>
+        <button onclick="conti(event)">Continue</button>
+        <p id="test1"></p>
+        <script>
+            let planets1 = ["Earth", "Jupiter","Venus","Saturn", "Mars", "Uranus", "Neptune", "Mercury"];
+            let output1 = "";
+            function conti(event){
+                for(i=0; i<planets.length; i++){
+                len = planets1[i]
+                if (i === 3){continue;}
+                output1 += len + "<br>";
+            }
+            document.getElementById("test1").innerHTML=output1;
+            }
+          
+        </script>
+    </div>
+</body>
+</html>

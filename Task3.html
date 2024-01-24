@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="Task3.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div>
+            <h3>Avg using Function</h3>
+            <p id="test1"></p>
+            <script>
+                function avg(a,b){
+                    return (a+b)/2;
+                }
+                let x = avg(38,49);
+                let x1 = avg(120,57);
+                document.getElementById("test1").innerHTML= "Average value of x:" + " " + x + "<br> "
+                +  "Average value of x1:" +" "+ x1;
+            </script>
+        </div>
+        <div>
+            <h3 >Data Type</h3>
+            <p id="test2"></p>
+            <script class="script">
+                function type(a){
+                    return typeof(a);
+                }
+               let y = type(3);
+               let z= type("things");
+               let a = type(true);
+               let b= type()
+               document.getElementById("test2").innerHTML= "Data type of 3 is:" + " "+ y + " <br>"
+                +"Data type of 'things' is:" + " "+ z + "<br>"+"Data type of 'true' is:" + " "+ a + "<br>"
+                +"Data type of '' is:" + " "+ b;
+            </script>
+
+        </div>
+        <div>
+            <h3>Using Objects</h3>
+            <p id="test3"></p>
+            <button onclick="carty(event)">click</button>
+            <button onclick="add(event)">To add</button>
+            <script>
+                
+                function carty(event){
+                   let cars = {Honda:"civic", Hyundai:"Elentra", Skoda:"Superb"};
+                   let tyres ={ tyre1:"michelene", tyre2:"Pirelli", tyre3:"MRF"};
+                   let value= (cars.Honda + " "+ tyres.tyre1);
+                 document.getElementById("test3").innerHTML= value;
+                }
+                function add(event){
+                    let cars = {Honda:"civic", Hyundai:"Elentra", Skoda:"Superb"};
+                    let add = (cars["Honda"]= "City");
+                    document.getElementById("test3").innerHTML= cars.Honda;
+                }
+                
+            </script>
+        </div>
+        <div>
+            <h3>String Methods</h3>
+            <p id="test4"></p>
+            <button onmouseover="over(event)" style="cursor: pointer;">over</button>
+            <p id="test5"></p>
+            <button onmouseover="over1(event)"   onmouseout="over2(event)" class="over1">over1</button>
+
+            <script>
+                function over(event){
+                    let lap = " Hp, Dell, Asus, Mac";
+                    let slice = lap.slice(5,9);
+                    document.getElementById("test4").innerHTML= slice;
+
+                }
+                function over1(event){
+                    let lap = " Hp, Dell, Asus, Mac";
+                    let subs = lap.substr(11,4);
+                    document.getElementById("test5").innerHTML= subs;
+                    
+                }
+                function over2(event){
+                    let rep = "I like BMW bike, and bike has unique feature";
+                    let repl = rep.replaceAll("bike", "car");
+                    document.getElementById("test5").innerHTML= repl;
+                    
+                }
+
+            </script>
+        </div>
+        <div>
+            <h3>Array Methods</h3>
+            <p id="test6"></p>
+            <select name="Select" onchange="select(event)">
+                <option value="push" >push</option>
+                <option value="pop">pop</option>
+                <option value="shift" >shift</option>
+            </select>
+
+            <script>
+                 let fruits = ["Banana", "orange", "Apple", "Mango"]
+                 
+                function select(event){
+                   const selectoption = event.target.value;
+                
+                   switch (selectoption) {
+                       case "push":
+                        fruits.push("Dragon");
+                        output = fruits.join(',');
+                       break
+                       case "pop":
+                        fruits.pop();
+                        output = fruits.join(',');
+                       break
+                       case "shift":
+                        fruits.shift();
+                        output = fruits.join(',');
+                        
+                    }
+                    console.log(output)
+                    document.getElementById("test6").innerHTML=output;
+
+                }
+                    
+              
+            </script>
+        </div>
+        <div>
+            <h3>Get Date</h3>
+             <p id="test7"></p>
+             <script>
+                const x2 = new Date();
+                const x3 = new Date(1997, 3);
+                const x4 = new Date(2024, 4, 22);
+                const x5 = new Date(2000, 11, 2, 23 );
+                const x6 = new Date(2003, 1, 2, 12, 45 );
+
+                document.getElementById("test7").innerHTML= x2.getFullYear() + "<br>" +x3.getMonth()+
+                "<br>" + x4.getDate() + "<br>" + x5.getDay() + "<br>" + x6.getUTCHours() ;
+             </script>
+        </div>
+        <div>
+            <h3>Set Date</h3>
+            <p id="test8"></p>
+            <script>
+              const x7 = new Date();
+                  x7.setFullYear(2022);
+              const x8 = new Date(1997, 3); 
+                  x8.setMonth(4);
+              const x9 = new Date(1997, 3, 23); 
+                  x9.setDate(46)        
+            document.getElementById("test8").innerHTML = x7 + "<br>"+ x8 + "<br>"+ x9 ;
+            </script>
+        </div>
+        <div>
+            <h3>Ternary</h3>
+            <input id="speed" type="number" >
+            <button onclick="speed()">submit</button>
+            <p id="test9" class="ter"></p>
+            <script>
+                function speed(){
+                    let xspeed = document.getElementById("speed").value;
+                    console.log(xspeed);
+                    let danger = (xspeed > 100)? "overspeed":"In limit";
+                    document.getElementById("test9").innerHTML= danger;
+                }
+            </script>
+           <h3>Nullish</h3>
+           <button onclick="nul()">click</button>
+           <p id="test10"></p>
+           <script>
+            function nul(){
+            let aa =  null ;
+            let bb = "strong";
+            let result = aa ?? bb;
+            document.getElementById("test10").innerHTML= result;
+            }
+           </script>
+        </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors</title>
+</head>
+
+<body style="background-color: aqua;">
+    
+    <div>
+        <h3>Errors Using Try and Catch method : </h3>
+        <p id="test"></p>
+    <p id="error"></p>
+    <select name="select" onchange="change()">
+        <option value="Size">Size</option>
+        <option value="add">Add</option>
+        <option value="delete">Delete</option>
+        <option value="has">Has</option>
+        <option value="foreach">foreach</option>
+    </select>
+    <script>
+       try {
+        let places = new St(["Golconda", "Charminar", "Cyber_Tower", "TankBund"]);
+        function change() {
+            let output = event.target.value;
+            let output1 = "";
+            switch (output) {
+                case "Size":
+                    output1 = places.size;
+                    break
+                case "add":
+                    let x = places.add("MindSpace");
+                    places.forEach(function (value) {
+                        x += value + "<br>";
+                    })
+                    output1 = document.getElementById("test").innerHTML = x;
+                    break
+                case "delete":
+                    places.delete("Charminar");
+                    output1 = places();
+                    break
+                case "has":
+                    output1 = places.has("Golconda");
+                    break
+                case "foreach":
+                    let text = "";
+                    places.forEach(function (value) {
+                        text += value + "<br>";
+                    })
+                    output1 = document.getElementById("test").innerHTML = text;
+                    break
+
+            }
+            document.getElementById("test").innerHTML = output1;
+        }
+       } catch (error) {
+        document.getElementById("error").innerHTML= error.message;
+        
+       }
+       
+    </script>
+    </div>
+    <div>
+        <h3>Using Arrow Function</h3>
+        <p id="test1"></p>
+        <script>
+            let sum = (a,b) => {
+                let result = a+b;
+                return result;
+            }
+            document.getElementById("test1").innerHTML= sum(12,13);
+        </script>
+    </div>
+</body>
+
+</html>

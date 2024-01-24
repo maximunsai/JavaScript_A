@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(133, 132, 132);
+}
+h3{
+    color: rgb(27, 26, 26);
+}
+ input{
+    border-radius: 4px;
+    height: 25px;
+
+ }
+ button{
+    border-radius: 3px;
+    
+ }
+ div{
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px 5px rgb(77, 73, 73);
+ }

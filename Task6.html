@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="Task6.css">
+</head>
+
+<body>
+    <h2>Using Maps</h2>
+    <h3>Used drop down and event: </h3>
+    <p>Here this is my MAP :  ["Ducati", "Panigale"],
+        ["BMW", "RR"],
+        ["Kawasaki", "Ninja"]</p>
+    <p id="test"></p>
+    <select name="select" onchange="change(event)">
+        <option value="set">set</option>
+        <option value="Delete">Delete</option>
+        <option value="Has">Has</option>
+        <option value="foreach">foreach</option>
+        <option value="size">size</option>
+    </select>
+    
+    <script>
+        let bikes = new Map([
+            ["Ducati", "Panigale"],
+            ["BMW", "RR"],
+            ["Kawasaki", "Ninja"]
+        ]);
+    
+        function change(event) {
+            let result = event.target.value;
+            let output = "";
+    
+            switch (result) {
+                case "set":
+                    bikes.set("Ducati", "MultiStarder");
+                    output = bikes.get("Ducati");
+                    break;
+                case "Delete":
+                    bikes.delete("BMW");
+                    output = bikes.get("BMW");
+                    break;
+                case "Has":
+                    output = bikes.has("Kawasaki");
+                    break;
+                case "foreach":
+                    let y = "";
+                    bikes.forEach(function (value, key) {
+                        y += value + "<br>";
+                    });
+                    output = y;
+                    break;
+                case "size":
+                    output = bikes.size;
+                    break;
+                default:
+                    output = "Invalid operation";
+            }
+            document.getElementById("test").innerHTML = output;
+        }
+    </script>
+    
+    </select>
+</body>
+
+</html>

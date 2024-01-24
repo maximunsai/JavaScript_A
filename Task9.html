@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link rel="stylesheet" href="Task9.css">
+</head>
+
+<body>
+    <div style="background-color: rgb(155, 102, 111);">
+        <h2>Using For Loop</h2>
+        <h3>Seperating Vowels and Constants From String</h3>
+        <input type="text" id="test">
+        <button onclick="vow()">submit</button>
+        <p id="test1"></p>
+        <p id="test2"></p>
+
+        <script>
+            function vow() {
+                let text = document.getElementById("test").value;
+                let len = text.length;
+                let vowels = "";
+                let consonants = "";
+
+                for (let i = 0; i < len; i++) {
+                    let Charr = text[i];
+
+                    if (Charr.match(/[aeiou]/)) {
+                        vowels += Charr + "<br>";
+                    } else if (!Charr.match(/[aeiou]/)) {
+                        consonants += Charr + "<br>";
+                    }
+                    
+                }
+
+                document.getElementById("test1").innerHTML = "Vowels: " + "<br>" + vowels;
+                document.getElementById("test2").innerHTML = "Consonants: " + "<br>" + consonants;
+            }
+        </script>
+    </div>
+    <div style="background-color: rgb(131, 192, 159);">
+        <h2>Using For In Loop</h2>
+        <p id="test3"></p>
+        <script>
+            let cars = { Honda: "civic", Hyundai: "Elentra", Skoda: "Superb", VW: "polo" };
+            let result = "";
+            for (let property in cars) {
+                result += property + "= " + cars[property] + "<br>";
+            }
+            document.getElementById("test3").innerHTML = result;
+        </script>
+
+    </div>
+    <div style="background-color: rgb(175, 177, 68);">
+        <h2>Using For Of Looop</h2>
+        <h3>Loop over string</h3>
+        <input type="text" id="test4">
+        <button onclick="outt()"> submit</button>
+        <p id="test5"></p>
+        <script>
+            function outt() {
+                let str = document.getElementById("test4").value;
+                let output = ""
+
+                for (const z of str) {
+                    output += z + "<br>";
+                }
+                document.getElementById("test5").innerHTML = output;
+            }
+        </script>
+
+        <h3>Loop over Array</h3>
+        <p id="test6"></p>
+        <script>
+            let arr = ["HTML", "CSS", "Java Script", "Type Script", "Angular"];
+            let output1 = ""
+
+            for (const y of arr) {
+                output1 += y + "<br>";
+            }
+            document.getElementById("test6").innerHTML = output1;
+
+        </script>
+
+    </div>
+    <div style="background-color: rgb(93, 88, 163);">
+        <h2>Loop using While</h2>
+        <p id="test7"></p>
+        <script>
+            let arry = ["HTML", "CSS", "Java ", "Type", "Angular"];
+            let i = 0 ;
+            let output2 ="";
+            while(arry[i]){
+                output2 += arry[i] + "<br>";
+                i++;
+
+            }
+            document.getElementById("test7").innerHTML=output2 ;
+
+        </script>
+       <h3>Loop Using Math F</h3>
+       <p id="test8"></p>
+       <script>
+           arry1 =[ 4.6, 7.2, 5.9, 2.4, 9.5, 10.2]
+           let result1 = "";
+           let j= 0;
+           while(arry1[j]){
+               result1 += Math.round(arry1[j])+ "<br>";
+               j++;
+           }
+           document.getElementById("test8").innerHTML= result1;
+
+       </script>
+
+    </div>
+</body>
+
+</html>

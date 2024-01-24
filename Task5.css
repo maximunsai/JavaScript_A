@@ -1,0 +1,75 @@
+body{
+    background-image: url(image.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: rgb(163, 121, 121);
+}
+
+.lname{
+    position: relative;
+    bottom: 20px;
+    left: 60px;
+}
+ 
+.Lname{
+    position: relative;
+    bottom: 21.5px;
+    left: 230px;
+}
+.gen{
+    position: relative;
+    bottom: 40px;
+    left: 280px;
+}
+.gen1 {
+    position: relative;
+    bottom: 42px;
+    left: 455px;
+}
+.div1 {
+    width: 50%;
+    height: 200px;
+    align-items: center;
+    position: absolute;
+    top: 380px;
+    background-color: cadetblue;
+    box-shadow: 10px 10px 15px rgb(58, 57, 57);
+  }
+.Age{
+    position: relative;
+    right: 75px;
+}  
+.Age1{
+    position: relative;
+    right: 110px;
+    top: 22px;
+} 
+.submit{
+    position: relative;
+    top: 100px;
+    background-color: rgb(61, 58, 58);
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+}
+.over1 {
+    position: relative;
+    left: 290px
+}
+.box{
+    position: relative;
+    left: 450px;
+    bottom: 70px;
+    width: 30px;
+    height: 30px;
+}
+.result{
+    position: relative;
+    left: 410px;
+    bottom: 50px;
+    cursor: pointer;
+}
+

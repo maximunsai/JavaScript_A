@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(175, 118, 118);
+}
+select{
+    border-radius: 4px;
+    background-color: black;
+    color: aliceblue;
+    width: 80px;
+    height: 25px;
+}

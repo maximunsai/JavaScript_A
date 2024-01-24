@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+    <link rel="stylesheet" href="Task2.css">
+</head>
+
+<body >
+
+    <h2>Using String Methods</h2>
+    <p> Here is my array : " ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"] "</p>
+    <div>
+        <h3>Array length</h3>
+        <p id="test"></p>
+        <button onclick="length(event)"> For Length</button>
+
+        <hr>
+        <script>
+            const bikes = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function length(event) {
+                let x = bikes.length;
+                document.getElementById('test').innerHTML = x;
+            }
+
+        </script>
+    </div>
+    <div>
+        <h3>Array to string</h3>
+        <p id="test1"></p>
+        <button onclick="tostring(event)">To string</button>
+
+        <hr>
+        <script>
+            const bikes1 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function tostring(event) {
+                let x1 = bikes.toString();
+                document.getElementById("test1").innerHTML = x1;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array join</h3>
+        <p id="test2"></p>
+        <button onclick="joinn(event)">To Join</button>
+
+        <hr>
+        <script>
+            const bikes2 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function joinn(event) {
+                let x2 = bikes2.join(" @ ");
+                document.getElementById("test2").innerHTML = x2;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array pop</h3>
+        <p id="test3"></p>
+        <button onclick="pop(event)">To Pop</button>
+
+        <hr>
+        <script>
+            const bikes3 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function pop(event) {
+                let x3 = bikes3.pop();
+                document.getElementById("test3").innerHTML = bikes3;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array push</h3>
+        <p id="test4"></p>
+        <input type="text" id="push">
+        <button onclick="push(event)">To Push</button>
+
+        <hr>
+        <script>
+            const bikes4 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function push(event) {
+                bikes4.push(document.getElementById("push").value);
+                document.getElementById("test4").innerHTML = bikes4;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array Shift</h3>
+        <p id="test5"></p>
+        <button onclick="shift(event)">To Shift</button>
+
+        <hr>
+        <script>
+            const bikes5 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function shift(event) {
+                bikes5.shift();
+                document.getElementById("test5").innerHTML = bikes5;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array Unshift</h3>
+        <input type="text" id="unshift">
+        <button onclick="unshift(event)">To UnShift</button>
+
+        <p id="test6"></p>
+        <hr>
+        <script>
+            const bikes6 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function unshift(event) {
+                bikes6.unshift(document.getElementById("unshift").value);
+                document.getElementById("test6").innerHTML = bikes6;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Replacing the value using Index</h3>
+        <input type="text" id="replace">
+
+        <button onclick="replace(event)">To Replace</button>
+
+        <p id="test7"></p>
+        <hr>
+        <script>
+            const bikes7 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function replace(event) {
+                bikes7[1] = document.getElementById("replace").value;
+                document.getElementById("test7").innerHTML = bikes7;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array delete</h3>
+        <input type="number" id="delete">
+        <button onclick="deletee(event)">To Delete</button>
+
+        <p id="test8"></p>
+        <hr>
+        <script>
+            const bikes8 = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function deletee(event) {
+                delete bikes8[document.getElementById("delete").value]
+                document.getElementById("test8").innerHTML = bikes8;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array Concat</h3>
+        <button onclick="concat(event)">To Concat</button>
+
+        <p id="test9"></p>
+        <hr>
+        <script>
+            const fruits = ["Apple", "Banana", "Grapes"];
+            const vegetables = ["Tomato", "Bitter Gaurd", "Drum sticks"];
+            const dryfruits = ["Almonds", "Dates", "Pista"]
+            document.getElementById('test9').innerHTML = x4;
+            function concat(event) {
+                let x4 = fruits.concat(vegetables, dryfruits);
+                document.getElementById("test9").innerHTML = x4;
+            }
+
+        </script>
+    </div>
+    <div>
+        <h3>Array Flatning</h3>
+        <p>This is the array : "const arr = [[22, 33], [44, 55], [66, 77]]"</p>
+        <button onclick="Flatning(event)">To Flatning</button>
+        <p id="test10"></p>
+        <hr>
+        <script>
+            const arr = [[22, 33], [44, 55], [66, 77]];
+            function Flatning(event) {
+                let y = arr.flat();
+                document.getElementById("test10").innerHTML = y;
+            }
+
+        </script>
+    </div>
+    <!-- <div>
+        <h3>Array Flatning</h3>
+        <p id="test11"></p>
+        <hr>
+        <script>
+            const arrr = [["aab", "bba"], ["cca", "ccb"], ["eea", "eeb"]];
+            let y1 = arrr.flat();
+            document.getElementById('test11').innerHTML = y1;
+        </script>
+    </div> -->
+    <div>
+        <h3>Array Splice</h3>
+        <button onclick="Splice(event)">To Splice</button>
+
+        <p id="test12"></p>
+        <hr>
+        <script>
+            const fruit = ["Apple", "Banana", "Grapes"];
+            function Splice(event) {
+                fruit.splice(1, 0, "Kiwi", "Avocado")
+                document.getElementById("test12").innerHTML = fruit;
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Array Slice</h3>
+        <button onclick="Slice(event)">To Slice</button>
+
+        <p id="test13"></p>
+        <hr>
+        <script>
+            const fruitt = ["Apple", "Banana", "Grapes"];
+            function Slice(event) {
+                document.getElementById('test13').innerHTML = fruitt.slice(2);
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Alphabetical Sorting</h3>
+        <button onclick="Sort(event)">To Sort</button>
+
+        <p id="test14"></p>
+        <hr>
+        <script>
+            const abc = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            function Sort(event){
+                let y2 = abc.sort();
+                document.getElementById('test14').innerHTML = y2;
+            }
+            
+        </script>
+    </div>
+    <div>
+        <h3>Neumeratical Sorting</h3>
+        <button onclick="NumberSorting(event)">To Sorting</button>
+
+        
+        <p id="test15"></p>
+        <hr>
+        <script>
+            const points = [23, 4, 12, 46, 122, 108];
+            function NumberSorting(event) {
+                points.sort(function (a, b) { return a - b });
+                document.getElementById("test15").innerHTML = points;
+            }
+            numsor();
+        </script>
+    </div>
+    <div>
+        <h3>Number to string</h3>
+        <p id="test16"></p>
+        <script>
+            const b = 200;
+            const c = b.toString();
+            document.getElementById("test16").innerHTML = typeof (c);
+        </script>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Count of total characters in Array</h3>
+        <p id="test17"></p>
+
+        <script>
+            const xyz = ["Ducati", "Beneli", "Aprilia", "BMW", "Mv Agusta"];
+            let total = 0;
+
+            for (let i = 0; i < xyz.length; i++) {
+                total += xyz[i].length;
+            }
+
+            document.getElementById('test17').innerHTML = total;
+        </script>
+
+    </div>
+</body>
+
+</html>

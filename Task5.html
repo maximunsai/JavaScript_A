@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+    <link rel="stylesheet" href="Task5.css">
+</head>
+
+<body>
+    <div>
+        <h1>Application Form</h1>
+    </div>
+    <div>
+        <label for="Fname">FirstName:</label><br>
+        <input type="text" id="test" placeholder="Firstname" onblur="firstinput(event)" />
+
+        <label for="Lname" class="lname">LastName:</label><br>
+        <input class="Lname" type="text" id="test1" placeholder="Lastname" onkeypress="secondinput(event)" />
+
+        <label for="Gender" class="gen">Gender:</label><br>
+        <select class="gen1" id="test2" placeholder="Select" name="Select" onclick="gender(event)">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select>
+        <label for="Age" class="Age">Age:</label>
+        <input type="number" class="Age1" id="test3" value="Age" onchange="Age(event)">
+
+        <button type="button" onmouseover="over(event)" style="cursor: pointer;">For_change</button>
+        <p id="inte" class="over1">Intrested</p>
+
+        <img id="result" src="empty.jpg" class="box">
+        <button onmouseover="right(event) " onmouseout="wrong(event)" class="result">result</button>
+
+    </div>
+
+    <input type="submit" value="submit" onclick="submit()" class="submit">
+
+
+
+
+    <div class="div1">
+        <p id="data"></p>
+        <p id="data1"></p>
+        <p id="data2"></p>
+        <script>
+
+            function firstinput(event) {
+                let output = event.target.value;
+                console.log(event.target.value, "console");
+                document.getElementById("data").dataset.firstname = output.toUpperCase();
+            }
+
+            function secondinput(event) {
+                let output = event.target.value;
+                console.log(event.target.value, "console");
+                document.getElementById("data").dataset.lastname = output;
+            }
+
+            function gender(event) {
+                let output = event.target.value;
+                console.log(event.target.value, "console");
+                document.getElementById("data").dataset.genderr = output;
+            }
+
+            function Age(event) {
+                let output = event.target.value;
+                console.log(event.target.value, "console");
+                document.getElementById('data').dataset.Agee = output;
+            }
+
+            function over(event) {
+                let a = "Not_Intrested";
+                console.log(event.target.value, "console");
+                document.getElementById('inte').innerHTML = a;
+                document.getElementById('data1').dataset.change = a;
+            }
+            function right(event) {
+                let x = document.getElementById("result").src = "right.png";
+                document.getElementById("data2").dataset.right = x;
+            }
+            function wrong(event) {
+                document.getElementById("result").src = "wrong.jfif";
+                document.getElementById("data").src = "wrong.jfif";
+
+            }
+
+            function submit() {
+                const firstName = document.getElementById("data").dataset.firstname;
+                const lastName = document.getElementById("data").dataset.lastname;
+                const gender = document.getElementById("data").dataset.genderr;
+                const Age = document.getElementById("data").dataset.Agee;
+                const Change = document.getElementById("data1").dataset.change;
+                const result = document.getElementById("data2").dataset.right;
+                document.getElementById("data").innerHTML = `FirstName: ${firstName},<br>  LastName: ${lastName},<br> Gender: ${gender},
+                <br> Age: ${Age},<br> Change: ${Change}<br> Result:${result}`;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

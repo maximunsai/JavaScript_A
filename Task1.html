@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If&For</title>
+  <link rel="stylesheet" href="Task1.css">
+</head>
+
+<body>
+  <div>
+    <h2>Using IF Else</h2>
+    <p>Please enter the time below in 24hrs format , It will returns food timings.</p>
+    <input type="number" id="test" />
+    <button onclick="clicks()">click</button>
+    <p id="test1"></p>
+    <script>
+      function clicks() {
+        const time1 = document.getElementById("test").value;
+        console.log(time1);
+        let time2;
+        if (time1 >= 10 && time1 <= 12) {
+          time2 = "Its a brunch time";
+        } else if (time1 >= 7 && time1 <= 10) {
+          time2 = "Its a breakfast time";
+        }
+        else if (time1 >= 12 && time1 <= 14) {
+          time2 = " Its a lunch time";
+        } else {
+          time2 = " Not a brunch or lunch time";
+        }
+        document.getElementById("test1").innerHTML = time2;
+      }
+    </script>
+  </div>
+  <div>
+
+  </div>
+</body>
+
+</html>
